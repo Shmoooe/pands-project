@@ -1,1 +1,2 @@
 # pands-project
+The Fisher Iris Dataset is a multivariate data set made famous by Ronald Fisher in 1936. The data set consists of 50 samples from each of three species of Iris (Iris setosa, Iris virginica and Iris versicolor), with 150 records in total. There are five attributes: sepal length, sepal width, petal length, petal width (measured in centimetres) and species. Fisher used this data to create a linear discriminant model to distinguish the species from each other. 
