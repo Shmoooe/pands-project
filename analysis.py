@@ -4,11 +4,10 @@
 # Output a scatter plot of each pair of variables.  
 # Author: Joanna Kelly
 
-import pandas as pd
+import pandas as pd    # imports pandas library and assigns the nickname 'pd'
 
-iris = pd.read_csv("iris.csv")
-df = pd.DataFrame(iris)
+iris = pd.read_csv("iris.csv") # Reads the data from a csv file and stores it in a pandas data frame
 
-description = df.describe()
+description = iris.describe() # This creates summary statistics for each variable
 print(description)
 
