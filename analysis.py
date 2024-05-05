@@ -11,3 +11,5 @@ iris = pd.read_csv("iris.csv") # Reads the data from a csv file and stores it in
 description = iris.describe() # This creates summary statistics for each variable
 print(description)
 
+with open("summary_statistics.txt", "w") as file:     # Creates a txt file 
+    file.write(description.to_string())         # writes to the new file and converts the summary stats to a string
