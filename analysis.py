@@ -31,3 +31,9 @@ plt.title("Histogram of Sepal Lengths") # Adds a title to the histogram
 plt.show()  # displays the histogram when the program is run
 #plt.savefig("sepal_length_hist.png")          # saves the histogram to a PNG file
 
+iris["sepal_width"].hist()
+plt.xlabel("Length in mm") 
+plt.ylabel("Frequency")
+plt.title("Histogram of Sepal Widths") 
+plt.show()  
+#plt.savefig("sepal_width_hist.png")
