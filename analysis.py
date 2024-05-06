@@ -29,25 +29,37 @@ plt.xlabel("Length in mm") # Adds a label to the x axis
 plt.ylabel("Frequency")
 plt.title("Histogram of Sepal Lengths") # Adds a title to the histogram
 plt.savefig("sepal_length_hist.png")          # saves the histogram to a PNG file
-plt.show()  # displays the histogram when the program is run
+#plt.show()  # displays the histogram when the program is run
 
 iris["sepal_width"].hist(color="darkgreen", alpha=0.7)
 plt.xlabel("Length in mm") 
 plt.ylabel("Frequency")
 plt.title("Histogram of Sepal Widths")  
 plt.savefig("sepal_width_hist.png")
-plt.show() 
+#plt.show() 
 
 iris["petal_length"].hist(color="#5E47CB") # hexadecimal colour of random iris flower
 plt.xlabel("Length in mm") 
 plt.ylabel("Frequency")
 plt.title("Histogram of Petal Lengths")  
 plt.savefig("petal_length_hist.png")
-plt.show() 
+#plt.show() 
 
 iris["petal_width"].hist(color="#5E47CB")
 plt.xlabel("Length in mm") 
 plt.ylabel("Frequency")
 plt.title("Histogram of Petal Widths")  
 plt.savefig("petal_width_hist.png")
-plt.show() 
+#plt.show() 
+
+fig, axes= plt.subplots(nrows=1, ncols=3, figsize=(8, 5)) # Creates a four histogram plot, number of rows and columns specified and the size of the figure in inches
+setosa["sepal_length"].hist(ax=axes[0], color= "darkgreen", alpha=0.8)
+axes[0].set_title("Setosa Sepal Length")
+
+versicolor["sepal_length"].hist(ax=axes[1], color= "darkgreen", alpha=0.75)
+axes[1].set_title("Versicolor Sepal Length")
+
+virginica["sepal_length"].hist(ax=axes[2], color= "darkgreen", alpha=0.7)
+axes[2].set_title("Virginica Sepal Length")
+plt.savefig("sepal_length_comparison.png")
+plt.show()
