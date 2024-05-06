@@ -21,7 +21,7 @@ setosa = iris[iris["species"]== "setosa"]  #seperates the species for later anal
 versicolor = iris[iris["species"]== "versicolor"]
 virginica = iris[iris["species"]== "virginica"]
 
-iris["sepal_length"].hist()  # isolates sepal length column
+iris["sepal_length"].hist(color="darkgreen", alpha=0.7)  # isolates sepal length column
 #setosa["sepal_length"].hist()
 #versicolor["sepal_length"].hist()
 #virginica["sepal_length"].hist()
@@ -31,9 +31,23 @@ plt.title("Histogram of Sepal Lengths") # Adds a title to the histogram
 plt.savefig("sepal_length_hist.png")          # saves the histogram to a PNG file
 plt.show()  # displays the histogram when the program is run
 
-iris["sepal_width"].hist()
+iris["sepal_width"].hist(color="darkgreen", alpha=0.7)
 plt.xlabel("Length in mm") 
 plt.ylabel("Frequency")
 plt.title("Histogram of Sepal Widths")  
 plt.savefig("sepal_width_hist.png")
+plt.show() 
+
+iris["petal_length"].hist(color="#5E47CB") # hexadecimal colour of random iris flower
+plt.xlabel("Length in mm") 
+plt.ylabel("Frequency")
+plt.title("Histogram of Petal Lengths")  
+plt.savefig("petal_length_hist.png")
+plt.show() 
+
+iris["petal_width"].hist(color="#5E47CB")
+plt.xlabel("Length in mm") 
+plt.ylabel("Frequency")
+plt.title("Histogram of Petal Widths")  
+plt.savefig("petal_width_hist.png")
 plt.show() 
