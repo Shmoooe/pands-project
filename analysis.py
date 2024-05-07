@@ -52,14 +52,26 @@ plt.title("Histogram of Petal Widths")
 plt.savefig("petal_width_hist.png")
 #plt.show() 
 
-fig, axes= plt.subplots(nrows=1, ncols=3, figsize=(8, 5)) # Creates a four histogram plot, number of rows and columns specified and the size of the figure in inches
-setosa["sepal_length"].hist(ax=axes[0], color= "darkgreen", alpha=0.8)
-axes[0].set_title("Setosa Sepal Length")
+fig1, axes1= plt.subplots(nrows=1, ncols=3, figsize=(8, 5)) # Creates a four histogram plot, number of rows and columns specified and the size of the figure in inches
+setosa["sepal_length"].hist(ax=axes1[0], color= "darkgreen", alpha=0.8)
+axes1[0].set_title("Setosa Sepal Length")
 
-versicolor["sepal_length"].hist(ax=axes[1], color= "darkgreen", alpha=0.75)
-axes[1].set_title("Versicolor Sepal Length")
+versicolor["sepal_length"].hist(ax=axes1[1], color= "darkgreen", alpha=0.75)
+axes1[1].set_title("Versicolor Sepal Length")
 
-virginica["sepal_length"].hist(ax=axes[2], color= "darkgreen", alpha=0.7)
-axes[2].set_title("Virginica Sepal Length")
+virginica["sepal_length"].hist(ax=axes1[2], color= "darkgreen", alpha=0.7)
+axes1[2].set_title("Virginica Sepal Length")
 plt.savefig("sepal_length_comparison.png")
+plt.show()
+
+fig2, axes2= plt.subplots(nrows=1, ncols=3, figsize=(8,5))
+setosa["sepal_width"].hist(ax=axes2[0], color= "darkgreen", alpha=0.8)
+axes2[0].set_title("Setosa Sepal Width")
+
+versicolor["sepal_width"].hist(ax=axes2[1], color= "darkgreen", alpha=0.75)
+axes2[1].set_title("Versicolor Sepal Width")
+
+virginica["sepal_width"].hist(ax=axes2[2], color= "darkgreen", alpha=0.7)
+axes2[2].set_title("Virginica Sepal Width")
+plt.savefig("sepal_width_comparison.png")
 plt.show()
