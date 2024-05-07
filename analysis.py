@@ -99,3 +99,5 @@ virginica["petal_width"].hist(ax=axes4[2], color="#5E47CB", alpha=0.7)
 axes4[2].set_title("Virginica Petal Width")
 plt.savefig("petal_width_comparison.png")
 plt.show()
+
+# Overlapping histograms petal length and sepals
