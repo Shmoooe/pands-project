@@ -24,13 +24,11 @@ iris["sepal_length"].hist(ax=axes[0,0], color="darkgreen", alpha=0.7)  # isolate
 axes[0,0].set_xlabel("Length in mm") # labels the x axis, along the bottom
 axes[0,0].set_ylabel("Frequency") # labels the y axis, up the side
 axes[0,0].set_title("Sepal Length") # gives a title to this individual histogram
-plt.subplots_adjust(bottom=0.15) # adjusts the spacing between the margins of the subplots so that x axis labels do not overlap with the titles of the next subplots
 
 iris["sepal_width"].hist(ax=axes[0,1], color="darkgreen", alpha=0.7)
 axes[0,1].set_xlabel("Width in mm")
 axes[0,1].set_ylabel("Frequency")
 axes[0,1].set_title("Sepal Width")
-plt.subplots_adjust(bottom=0.15) # adjusts the spacing between the margins of the subplots so that x axis labels do not overlap with the titles of the next subplots
 
 iris["petal_length"].hist(ax=axes[1,0], color="#5E47CB") # hexadecimal colour of random iris flower
 axes[1,0].set_xlabel("Length in mm")
@@ -41,7 +39,7 @@ iris["petal_width"].hist(ax=axes[1,1], color="#5E47CB", alpha= 0.8)
 axes[1,1].set_xlabel("Width in mm")
 axes[1,1].set_ylabel("Frequency")
 axes[1,1].set_title("Petal Width")
-plt.tight_layout  # prevents overlapping of subplots
+plt.tight_layout()  # prevents overlapping of subplots
 plt.savefig("variable_overview_hist.png")          # saves the histogram to a PNG file
 plt.show()  # displays the histogram when the program is run
 
@@ -94,5 +92,3 @@ virginica["petal_width"].hist(ax=axes4[2], color="#5E47CB", alpha=0.7)
 axes4[2].set_title("Virginica Petal Width")
 #plt.savefig("petal_width_comparison.png")
 #plt.show()
-
-# Overlapping histograms petal length and sepals
