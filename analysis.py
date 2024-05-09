@@ -107,9 +107,9 @@ axes4[2].set_title("Virginica Petal Width")
 axes4[2].set_xlabel("in cm")
 plt.savefig("petal_width_comparison.png")
 
-iris.plot.scatter(x="sepal_length", y="sepal_width", color= "darkgreen", alpha=0.5)
-plt.title("Sepal Length and Width in cm")
-plt.savefig("sepal_scatter.png")
+iris.plot.scatter(x="sepal_length", y="sepal_width", color= "darkgreen", alpha=0.5) #plot.scatter creates our scatter plots
+plt.title("Sepal Length and Width in cm")  #Creates a title
+plt.savefig("sepal_scatter.png") #saves the file
 
 iris.plot.scatter(x="petal_length", y="petal_width", color="#5E47CB", alpha=0.5)
 plt.title("Petal Length and Width in cm")
