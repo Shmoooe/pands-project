@@ -11,6 +11,7 @@ import matplotlib.pyplot as plt # software to create my histograms and scatter p
 
 iris = pd.read_csv("iris.csv") # Reads the data from a csv file and stores it in a pandas data frame
 description = iris.describe() # This creates summary statistics for each variable
+description.to_csv("summary_stats.csv", index= True) # Saves a csv file for data visualisation
 
 with open("summary_statistics.txt", "w") as file:     # Creates a txt file 
     file.write(description.to_string())         # writes to the new file and converts the summary stats to a string
@@ -22,12 +23,12 @@ if not os.path.exists(save_directory):     # Checks to see if directory exists, 
 
 # Creating a subplot of histograms for an overview of 4 variables:
 variable_overview, axes= plt.subplots(nrows=2, ncols=2, figsize=(10, 6)) # Creates a four histogram plot, number of rows and columns specified and the size of the figure in inches
-iris["sepal_length"].hist(ax=axes[0,0], color="darkgreen", alpha=0.7)  # isolates sepal length column and assigns it to row 1, column 1, alpha refers to the opacity
+iris["sepal_length"].hist(ax=axes[0,0], color="gold", alpha=0.7)  # isolates sepal length column and assigns it to row 1, column 1, alpha refers to the opacity
 axes[0,0].set_xlabel("Length in cm") # labels the x axis, along the bottom
 axes[0,0].set_ylabel("Frequency") # labels the y axis, up the side
 axes[0,0].set_title("Sepal Length") # gives a title to this individual histogram
 
-iris["sepal_width"].hist(ax=axes[0,1], color="darkgreen", alpha=0.7)
+iris["sepal_width"].hist(ax=axes[0,1], color="gold", alpha=0.7)
 axes[0,1].set_xlabel("Width in cm")
 axes[0,1].set_ylabel("Frequency")
 axes[0,1].set_title("Sepal Width")
@@ -53,15 +54,15 @@ virginica = iris[iris["species"]== "virginica"]
 
 # Creating a hist for the sepal lengths of each species
 sepal_length_comp, axes1= plt.subplots(nrows=1, ncols=3, figsize=(8, 5)) # Creates a four histogram plot, number of rows and columns specified and the size of the figure in inches
-setosa["sepal_length"].hist(ax=axes1[0], color= "darkgreen", alpha=0.8) #axes1[0]= the first histogram of the row in column one
+setosa["sepal_length"].hist(ax=axes1[0], color= "gold", alpha=1) #axes1[0]= the first histogram of the row in column one
 axes1[0].set_title("Setosa Sepal Length")
 axes1[0].set_xlabel("in cm")
 
-versicolor["sepal_length"].hist(ax=axes1[1], color= "darkgreen", alpha=0.75)
+versicolor["sepal_length"].hist(ax=axes1[1], color= "gold", alpha=0.95)
 axes1[1].set_title("Versicolor Sepal Length")
 axes1[1].set_xlabel("in cm")
 
-virginica["sepal_length"].hist(ax=axes1[2], color= "darkgreen", alpha=0.7)
+virginica["sepal_length"].hist(ax=axes1[2], color= "gold", alpha=0.9)
 axes1[2].set_title("Virginica Sepal Length")
 axes1[2].set_xlabel("in cm")
 plt.savefig(os.path.join(save_directory, "sepal_length_comparison.png"))
@@ -69,15 +70,15 @@ plt.savefig(os.path.join(save_directory, "sepal_length_comparison.png"))
 
 # Creating a hist for the sepal widths of each species
 sepal_width_comp, axes2= plt.subplots(nrows=1, ncols=3, figsize=(8,5))
-setosa["sepal_width"].hist(ax=axes2[0], color= "darkgreen", alpha=0.8)
+setosa["sepal_width"].hist(ax=axes2[0], color= "gold", alpha=1)
 axes2[0].set_title("Setosa Sepal Width")
 axes2[0].set_xlabel("in cm")
 
-versicolor["sepal_width"].hist(ax=axes2[1], color= "darkgreen", alpha=0.75)
+versicolor["sepal_width"].hist(ax=axes2[1], color= "gold", alpha=0.95)
 axes2[1].set_title("Versicolor Sepal Width")
 axes2[1].set_xlabel("in cm")
 
-virginica["sepal_width"].hist(ax=axes2[2], color= "darkgreen", alpha=0.7)
+virginica["sepal_width"].hist(ax=axes2[2], color= "gold", alpha=0.9)
 axes2[2].set_title("Virginica Sepal Width")
 axes2[2].set_xlabel("in cm")
 plt.savefig(os.path.join(save_directory, "sepal_width_comparison.png"))
@@ -116,7 +117,7 @@ plt.savefig(os.path.join(save_directory, "petal_width_comparison.png"))
 
 
 #Creating a scatter plot with sepal lengths and sepal widths across all three species
-iris.plot.scatter(x="sepal_length", y="sepal_width", color= "darkgreen", alpha=0.5) #plot.scatter creates our scatter plots
+iris.plot.scatter(x="sepal_length", y="sepal_width", color= "gold", alpha=0.8) #plot.scatter creates our scatter plots
 plt.title("Sepal Length and Width in cm")  #Creates a title
 plt.savefig(os.path.join(save_directory, "sepal_scatter.png")) #saves the file
 
@@ -124,3 +125,27 @@ plt.savefig(os.path.join(save_directory, "sepal_scatter.png")) #saves the file
 iris.plot.scatter(x="petal_length", y="petal_width", color="#5E47CB", alpha=0.5)
 plt.title("Petal Length and Width in cm")
 plt.savefig(os.path.join(save_directory, "petal_scatter.png"))
+
+'''
+species= [setosa, versicolor, virginica]
+data= iris["sepal_length", "sepal_width", "petal_length", "petal_width"]
+
+sepal_length_violin_plot, axes5 = plt.subplots(nrows=2, ncols=2, figsize= (8,5))
+axes5[0, 0].violinplot(species, data, points=20, widths=0.3,
+                     showmeans=True, showextrema=True, showmedians=True)
+
+axes5[0,0].set_xticks([1, 2, 3])
+axes5[0,0].set_xticklabels(["Setosa", "Versicolor", "Virginica"])
+axes5[0,0].set_ylabel("Sepal Length")
+axes5[0,0].set_title("Violin Plot of Sepal Length by Iris Species")
+
+axes5[0, 1].violinplot(species, data, points=20, widths=0.3,
+                     showmeans=True, showextrema=True, showmedians=True)
+
+axes5[0,1].set_xticks([1, 2, 3])
+axes5[0,1].set_xticklabels(["Setosa", "Versicolor", "Virginica"])
+axes5[0,1].set_ylabel("Sepal Length")
+axes5[0,1].set_title("Violin Plot of Sepal Length by Iris Species")
+plt.show()
+
+'''
