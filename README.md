@@ -10,7 +10,7 @@ At the time of the dataset being created, statistician and biologist, Ronald Fis
 
 Sepals are characterised as laying flat and are the "landing pads" for bees and other insects, whilst the petals stand straight upwards.
 
-<img src="https://github.com/Shmoooe/pands-project/assets/157913855/01dce8dd-9492-49a3-be99-35dfdb4de049" height= "100">
+<img src="https://github.com/Shmoooe/pands-project/assets/157913855/01dce8dd-9492-49a3-be99-35dfdb4de049" height= "300">
 
 ## Repository
 
@@ -27,11 +27,11 @@ The repository contains four files and a directory:
         References
 
 2. #### analysis.py
-    - 
+    
     Contains the script used to analyse the data.
 
 3. #### iris.csv
-    - 
+    
     Is the source of the dataset used.
 
 4. #### summary_statistics.txt
