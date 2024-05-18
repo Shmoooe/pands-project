@@ -9,18 +9,19 @@ import pandas as pd    # imports pandas library and assigns the nickname 'pd', p
 import os # software for creating directories and saving files to different directories    
 import matplotlib.pyplot as plt # software to create my histograms and scatter plots
 
+# creating my varaibles and seperating the species:
 iris = pd.read_csv("iris.csv") # Reads the data from a csv file and stores it in a pandas data frame
-description = iris.describe() # This creates summary statistics for each variable
-description.to_csv("summary_stats.csv", index= True) # Saves a csv file for data visualisation
-
-#seperating the species:
 setosa = iris[iris["species"]== "setosa"]  
 versicolor = iris[iris["species"]== "versicolor"]
 virginica = iris[iris["species"]== "virginica"]
 
+# creating my summary_statitics.txt
+description = iris.describe() # This creates summary statistics for each variable
+description.to_csv("summary_stats.csv", index= True) # Saves a csv file for data visualisation
 with open("summary_statistics.txt", "w") as file:     # Creates a txt file 
     file.write(description.to_string())         # writes to the new file and converts the summary stats to a string
 
+# creating my_plots directory
 directory_name = "my_plots" # Name of directory
 save_directory = os.path.join("\\Users\\joann\\Desktop\\pands\\pands-project", directory_name) # Need to use escape backslashes otherwise syntax error occurs
 if not os.path.exists(save_directory):     # Checks to see if directory exists, creates the directory if not
@@ -124,27 +125,3 @@ plt.savefig(os.path.join(save_directory, "sepal_scatter.png")) #saves the file
 iris.plot.scatter(x="petal_length", y="petal_width", color="#5E47CB", alpha=0.5)
 plt.title("Petal Length and Width in cm")
 plt.savefig(os.path.join(save_directory, "petal_scatter.png"))
-
-'''
-species= [setosa, versicolor, virginica]
-data= iris["sepal_length", "sepal_width", "petal_length", "petal_width"]
-
-sepal_length_violin_plot, axes5 = plt.subplots(nrows=2, ncols=2, figsize= (8,5))
-axes5[0, 0].violinplot(species, data, points=20, widths=0.3,
-                     showmeans=True, showextrema=True, showmedians=True)
-
-axes5[0,0].set_xticks([1, 2, 3])
-axes5[0,0].set_xticklabels(["Setosa", "Versicolor", "Virginica"])
-axes5[0,0].set_ylabel("Sepal Length")
-axes5[0,0].set_title("Violin Plot of Sepal Length by Iris Species")
-
-axes5[0, 1].violinplot(species, data, points=20, widths=0.3,
-                     showmeans=True, showextrema=True, showmedians=True)
-
-axes5[0,1].set_xticks([1, 2, 3])
-axes5[0,1].set_xticklabels(["Setosa", "Versicolor", "Virginica"])
-axes5[0,1].set_ylabel("Sepal Length")
-axes5[0,1].set_title("Violin Plot of Sepal Length by Iris Species")
-plt.show()
-
-'''
