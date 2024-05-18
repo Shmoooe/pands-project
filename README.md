@@ -68,6 +68,17 @@ And finally I created a directory in order to store the plots.
 - Virginica petal length data is skewed right and the variation in length is the greatest of the three (at about 2.7cm in difference). And Virginica have the longest petals. 
 
 
+### Petal Width
+
+![Petal Width Comparison](my_plots/petal_width_comparison.png)
+
+- Setosa petal widths are the thinnest of the three species and there is very little variation in their measurements, with over half of the measurements being roughly 0.25cm. There are however some outliers with the range sitting between 0.1 and 0.6cm.
+
+- Versicolor petals are wider than Setosa petals and range between approx. 1 and 1.85cm in width. There's a slight skew to the right with the majority measuring between 1 and 1.3cm.
+
+- Vriginica petals are the widest of the three and have the most variation.
+
+
 ## References
 
 Where I download the iris dataset:
