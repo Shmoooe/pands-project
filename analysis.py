@@ -5,13 +5,18 @@
 # Author: Joanna Kelly
 
 # Importing necessary software:
-import pandas as pd    # imports pandas library and assigns the nickname 'pd'
+import pandas as pd    # imports pandas library and assigns the nickname 'pd', pandas allows me to open and read files
 import os # software for creating directories and saving files to different directories    
 import matplotlib.pyplot as plt # software to create my histograms and scatter plots
 
 iris = pd.read_csv("iris.csv") # Reads the data from a csv file and stores it in a pandas data frame
 description = iris.describe() # This creates summary statistics for each variable
 description.to_csv("summary_stats.csv", index= True) # Saves a csv file for data visualisation
+
+#seperating the species:
+setosa = iris[iris["species"]== "setosa"]  
+versicolor = iris[iris["species"]== "versicolor"]
+virginica = iris[iris["species"]== "virginica"]
 
 with open("summary_statistics.txt", "w") as file:     # Creates a txt file 
     file.write(description.to_string())         # writes to the new file and converts the summary stats to a string
@@ -45,12 +50,6 @@ axes[1,1].set_title("Petal Width")
 plt.tight_layout()  # prevents overlapping of subplots
 plt.savefig(os.path.join(save_directory, "variable_overview_hist.png"))          # saves the histogram to a PNG file
 #plt.show()  # displays the histogram when the program is run
-
-
-#seperating the species:
-setosa = iris[iris["species"]== "setosa"]  
-versicolor = iris[iris["species"]== "versicolor"]
-virginica = iris[iris["species"]== "virginica"]
 
 # Creating a hist for the sepal lengths of each species
 sepal_length_comp, axes1= plt.subplots(nrows=1, ncols=3, figsize=(8, 5)) # Creates a four histogram plot, number of rows and columns specified and the size of the figure in inches
