@@ -8,8 +8,11 @@ The Fisher Iris data set centres around three species; Setosa, Versicolor and Vi
 
 At the time of the dataset being created, statistician and biologist, Ronald Fisher used the data to develop a way to differentiate the species by their characteristics, creating a linear discriminant analysis.
 
-Sepals are characterised as laying flat and are the "landing pads" for bees and other insects, whilst the petals stand straight upwards. 
-![Iris flower with sepal and petal labels]("C:\Users\joann\Downloads\Iris Flower Labelled.jpg")
+Sepals are characterised as laying flat and are the "landing pads" for bees and other insects, whilst the petals stand straight upwards.
+
+![Iris Flower Labelled](https://github.com/Shmoooe/pands-project/assets/157913855/01dce8dd-9492-49a3-be99-35dfdb4de049)
+
+
 
 Repository
 The repository contains four files and a directory:
