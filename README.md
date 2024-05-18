@@ -76,7 +76,57 @@ And finally I created a directory in order to store the plots.
 
 - Versicolor petals are wider than Setosa petals and range between approx. 1 and 1.85cm in width. There's a slight skew to the right with the majority measuring between 1 and 1.3cm.
 
-- Vriginica petals are the widest of the three and have the most variation.
+- Vriginica petals are the widest of the three and have the most variation. With the majority being at the wider end of the range.
+
+
+### Sepal Length
+
+![Sepal Length Comparison](my_plots/sepal_length_comparison.png)
+
+- Setosa sepal lengths are roughly symmetrical with an approximate range of 4.2 and 5.8cm.
+
+- Versicolor sepal lengths are skewed to the right. With a min and max of 4.9 and 7cm.
+
+- Vriginica tend to have the longest sepals with a left skewed data set and most measurements being between 6 and 7cm. The min and max are about 4.9 and 7.9. Once again showing Virginicas to have the longest and most varying measurements of the three species.
+
+### Sepal Width
+
+![Sepal Width Comparison](my_plots/sepal_width_comparison.png)
+
+- Surprisingly, Setosa have the widest sepals and the most variance. The range is between approx. 2.1 and 4.4cm.
+
+- Versicolors are skewed left with a min and max of 2 and 3.4cm.
+
+- Virginica are roughly symmetrical. The range of Virginica sepal widths is between 2.1 and 3.9cm
+
+
+### Petal Scatter
+
+![Petal Scatter Plot](my_plots/petal_scatter.png)
+
+- Setosa are clearly separate from the other species in the lower left corner, having the thinnest and shortest petals of the three species.
+
+- Versicolor Irises lie in the middle of the scatter plot. The length and width of both Versicolor and Setosa petals have a positive relationship.
+
+- Virginica Irises with their long and wide petals can clearly be seen in the upper right of the scatter plot. Both variables have a positive relationship, but the greater variance in measurements, relative to Setosa and Versicolor, can also be seen here.
+
+### Sepal Scatter
+
+![Sepal Scatter Plot](my_plots/sepal_scatter.png)
+
+- There doesn't appear to be any relationship between the length and width of the sepals.
+
+- We can see outliers in sepal widths, between 4 and 5cm, we know these belong to Setosa. Whilst the longest sepals between 7.5 and 8cm belong to Virginica. Once again, Versicolor tend to gather in the middle, between the two species.
+
+## Conclusion
+
+![Variable Overview](my_plots/variable_overview_hist.png)
+
+In conclusion, there is certainly a clear difference between Setosa and Virginica. Setosa consistently has the smallest petal measurements, which can explain the outliers in the Petal length and Petal Width histograms above. At the same time Setosa have the widest sepals.
+
+Virginica have the largest petals in both length and width and the longest sepals. The only exception being sepal widths.
+
+Versicolor sits firmly in the middle, but tends to be closer in lengths and widths to Virginica than Setosa. Likewise, Versicolor appears to align itself with the median values of each variable. 
 
 
 ## References
