@@ -10,34 +10,35 @@ At the time of the dataset being created, statistician and biologist, Ronald Fis
 
 Sepals are characterised as laying flat and are the "landing pads" for bees and other insects, whilst the petals stand straight upwards.
 
-<img src="https://github.com/Shmoooe/pands-project/issues/1#issue-2304008807" height= "100">
+<img src="https://github.com/Shmoooe/pands-project/assets/157913855/01dce8dd-9492-49a3-be99-35dfdb4de049" height= "100">
 
 ## Repository
 
 The repository contains four files and a directory:
-1. README.md:
+1. #### README.md:
+    
     1. 
-    Background and overview
+        Background and overview
     2. 
-    A breakdown of the process of creating the script for analysis.py
+        A breakdown of the process of creating the script for analysis.py
     3. 
-    Instructions for using the code 
+        Instructions for using the code 
     4. 
-    References
+        References
 
-2. analysis.py
+2. #### analysis.py
     - 
     Contains the script used to analyse the data.
 
-3. iris.csv
+3. #### iris.csv
     - 
     Is the source of the dataset used.
 
-4. summary_statistics.txt
+4. #### summary_statistics.txt
     - 
     Contains the mean, standard deviation and the minimum and maximum values of each variable in the data set.
 
-5. My-plots
+5. #### My-plots
     - 
     Is the directory containing all plots generated using analysis.py.
 
