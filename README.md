@@ -10,37 +10,53 @@ At the time of the dataset being created, statistician and biologist, Ronald Fis
 
 Sepals are characterised as laying flat and are the "landing pads" for bees and other insects, whilst the petals stand straight upwards.
 
-![Iris Flower Labelled](https://github.com/Shmoooe/pands-project/assets/157913855/01dce8dd-9492-49a3-be99-35dfdb4de049)
+<img src="https://github.com/Shmoooe/pands-project/issues/1#issue-2304008807" height= "100">
 
+## Repository
 
-
-Repository
 The repository contains four files and a directory:
-README.md:
-Background and overview
-A breakdown of the process of creating the script for analysis.py
-Instructions for using the code 
-References
+1. README.md:
+    1. 
+    Background and overview
+    2. 
+    A breakdown of the process of creating the script for analysis.py
+    3. 
+    Instructions for using the code 
+    4. 
+    References
 
-analysis.py
-Contains the script used to analyse the data.
+2. analysis.py
+    - 
+    Contains the script used to analyse the data.
 
-iris.csv
-Is the source of the dataset used.
+3. iris.csv
+    - 
+    Is the source of the dataset used.
 
-summary_statistics.txt
-Contains the mean, standard deviation and the minimum and maximum values of each variable in the data set.
+4. summary_statistics.txt
+    - 
+    Contains the mean, standard deviation and the minimum and maximum values of each variable in the data set.
 
-My-plots
-Is the directory containing all plots generated using analysis.py.
+5. My-plots
+    - 
+    Is the directory containing all plots generated using analysis.py.
 
 
-Analysis.py
-To run the code, the user will need to have Python available to use on their computer, which can be downloaded from the official website (). The raw script (analysis.py) can be cloned and downloaded from Github. Afterwards, the user will need to open a terminal and navigate to the directory that contains the raw code. From there the user can run the code by typing in the following command: python analysis.py. 
+## Analysis.py
 
-Firstly to begin writing my Python code, I had to download the Fisher Iris dataset and save it as a csv file within my repository to use the data for analysis (). Secondly I had to import all relevant libraries as follows: pandas, os and matplotlib.py. Then I could create my variables, for example “iris”, “setosa”, “versicolor” and “virginica”. With the variable “iris”, I could create a subplot of histograms to give an overview of each variable (sepal length and width, and petal length and width). Subplots of histograms to compare sepal length, sepal width, petal length and petal width between the three species are also created. Two scatter plots are created to show the correlation between each pair of variables, however all species are included. And finally I created a directory in order to store the plots. 
+To run the code, the user will need to have Python available to use on their computer, which can be downloaded from the [official website](https://www.python.org/downloads/release/python-3123/). The raw script (analysis.py) can be cloned and downloaded from Github. Afterwards, the user will need to open a terminal and navigate to the directory that contains the raw code. From there the user can run the code by typing in the following command: python analysis.py. 
 
-References
+Firstly to begin writing my Python code, I had to download the [Fisher Iris dataset](https://gist.github.com/curran/a08a1080b88344b0c8a7) and save it as a csv file within my repository to use the data for analysis. 
+
+Secondly I had to import all relevant libraries as follows: pandas, os and matplotlib.py. 
+
+Then I could create my variables, for example “iris”, “setosa”, “versicolor” and “virginica”. With the variable “iris”, I could create a subplot of histograms to give an overview of each variable (sepal length and width, and petal length and width). Subplots of histograms to compare sepal length, sepal width, petal length and petal width between the three species are also created. Two scatter plots are created to show the correlation between each pair of variables, however all species are included. 
+
+And finally I created a directory in order to store the plots. 
+
+
+## References
+
 Where I download the iris dataset:
 https://gist.github.com/curran/a08a1080b88344b0c8a7
 
@@ -58,9 +74,6 @@ https://www.tutorialspoint.com/how-to-save-a-histogram-plot-in-python
 
 Overlapping problem:
 https://matplotlib.org/stable/users/explain/axes/tight_layout_guide.html
-
-Scatter plot colour problem:
-https://stackoverflow.com/questions/12236566/setting-different-color-for-each-series-in-scatter-plot
 
 Improving code readability:
 https://realpython.com/python-pep8/#:~:text=PEP%208%2C%20sometimes%20spelled%20PEP8,and%20consistency%20of%20Python%20code.
