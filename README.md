@@ -55,6 +55,18 @@ Then I could create my variables, for example “iris”, “setosa”, “versi
 
 And finally I created a directory in order to store the plots. 
 
+## Data Analysis and Plots
+
+### Petal Length
+
+![Petal Length Comparison](my_plots/petal_length_comparison.png)
+
+- Setosa petal length data is roughly symmetric with little variation in length (less than 1cm). They have the shortest petals of all three species.
+
+- Versicolor petal length data is skewed left with the majority of lengths about 4.5cm. Variation in petal length is relatively moderate, with about 2cm difference in the min and max range.
+
+- Virginica petal length data is skewed right and the variation in length is the greatest of the three (at about 2.7cm in difference). And Virginica have the longest petals. 
+
 
 ## References
 
